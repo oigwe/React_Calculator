@@ -1,0 +1,32 @@
+NEEDS OF A CALCULATOR
+1. Display
+2. Buttons
+    a. Value or Operations
+    b. Function
+
+FUNCTIONS
+Value 0 - On Click Display displays 0 - concats to any value already displayed 
+Value 1 - On Click Display displays 1 - concats to any value already displayed 
+Value 2 - On Click Display displays 2 - concats to any value already displayed 
+Value 3 - On Click Display displays 3 - concats to any value already displayed 
+Value 4 - On Click Display displays 4 - concats to any value already displayed 
+Value 5 - On Click Display displays 5 - concats to any value already displayed 
+Value 6 - On Click Display displays 6 - concats to any value already displayed 
+Value 7 - On Click Display displays 7 - concats to any value already displayed 
+Value 8 - On Click Display displays 8 - concats to any value already displayed 
+Value 9 - On Click Display displays 9 - concats to any value already displayed 
+Value . - On Click Display displays . - concats to any value already displayed - but can only have 1 on the display
+
+Methods
+Value AC - Resets display and removes any stored values
+Value C - Clears operations (used once)
+Value + - Adds stored value to new input value
+Value - - Subtracts new input value from stored value
+Value * - Multiples stored value to new input value
+Value / - Divides stored value to new input value
+Value = - Executes operation of stored value & new value
+Value % - Divides display by 100
+Value +/- - Multiple display by -1
+
+
+
