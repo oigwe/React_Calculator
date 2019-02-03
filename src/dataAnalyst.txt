@@ -18,13 +18,13 @@ Value 9 - On Click Display displays 9 - concats to any value already displayed
 Value . - On Click Display displays . - concats to any value already displayed - but can only have 1 on the display
 
 OPERATIONS
-Value AC - On Click Resets display and removes any stored values
-Value C - On Click Clears operations and new input value and allows a new operation and new input per 
-Value + - On Click Adds stored value to new input value
-Value - - On ClickSubtracts new input value from stored value
-Value * - On Click Multiples stored value to new input value
-Value / - On Click Divides stored value to new input value
-Value = - On Click Executes operation of stored value & new value
+Value AC - On Click - Resets display and removes any stored values
+Value C - On Click - Clears operations and new input value and allows a new operation and new input per 
+Value + - On Click - Stores value, clears display, adds stored value to new input value
+Value - - On Click - Stores value, clears display, subtracts new input value from stored value
+Value * - On Click - Stores value, clears display, multiples stored value to new input value
+Value / - On Click - Stores value, clears display, divides stored value to new input value
+Value = - On Click - Executes operation of stored value & new value
 Value % - On Click Divides display by 100
 Value +/- - On Click Multiple display by -1
 
