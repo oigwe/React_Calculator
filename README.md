@@ -68,7 +68,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 # React_Calculator
 
-##Task
+## Task
 You will create a React app that mimics a simple calculator
 Please use create-react-app to generate your project
 Break your application down to necessary components
@@ -83,7 +83,7 @@ Operations: Queues the operation
 Equal to: Invokes the operation to happen
 Play around with the Live Example
 
-##State
+## State
 Use the following state:
 
 {
@@ -93,7 +93,7 @@ Use the following state:
   waitingForNewValue: false
 }
 
-##Styling
+## Styling
 Center your calculator so it takes up 50% of the screen
 
 You may use the following button css to get started quickly:
@@ -121,4 +121,4 @@ button:active {
   color: #fff;
 }
 
-###Try your best to make it look like the example
+### Try your best to make it look like the example
