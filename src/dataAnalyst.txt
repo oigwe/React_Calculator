@@ -32,8 +32,8 @@ CONDITIONALS
 
 AC/C
 
-if C
-if AC
+if C - appears when certain operations are clicked (+, -, *, /); operation is null
+if AC - default - appears (=) is clicked -  clears display, clears previousValue, operation is null
 
 .
 
