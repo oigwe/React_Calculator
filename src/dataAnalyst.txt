@@ -2,9 +2,9 @@ NEEDS OF A CALCULATOR
 1. Display
 2. Buttons
     a. Value or Operations
-    b. Function
+    b. Function or Methods
 
-FUNCTIONS
+VALUE
 Value 0 - On Click Display displays 0 - concats to any value already displayed 
 Value 1 - On Click Display displays 1 - concats to any value already displayed 
 Value 2 - On Click Display displays 2 - concats to any value already displayed 
@@ -17,16 +17,24 @@ Value 8 - On Click Display displays 8 - concats to any value already displayed
 Value 9 - On Click Display displays 9 - concats to any value already displayed 
 Value . - On Click Display displays . - concats to any value already displayed - but can only have 1 on the display
 
-Methods
-Value AC - Resets display and removes any stored values
-Value C - Clears operations (used once)
-Value + - Adds stored value to new input value
-Value - - Subtracts new input value from stored value
-Value * - Multiples stored value to new input value
-Value / - Divides stored value to new input value
-Value = - Executes operation of stored value & new value
-Value % - Divides display by 100
-Value +/- - Multiple display by -1
+OPERATIONS
+Value AC - On Click Resets display and removes any stored values
+Value C - On Click Clears operations and new input value and allows a new operation and new input per 
+Value + - On Click Adds stored value to new input value
+Value - - On ClickSubtracts new input value from stored value
+Value * - On Click Multiples stored value to new input value
+Value / - On Click Divides stored value to new input value
+Value = - On Click Executes operation of stored value & new value
+Value % - On Click Divides display by 100
+Value +/- - On Click Multiple display by -1
 
+App State =
+{
+  displayValue: '0',
+  previousValue: null,
+  operation: null,
+  waitingForNewValue: false
+}
 
+Thougts - styling props of orange buttons
 
