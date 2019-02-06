@@ -39,7 +39,8 @@ if AC - default - appears (=) is clicked -  clears display, clears previousValue
 
 if string input value includes "." ignore on click event 
 
-
+0
+if the display value starts with 0 -/upon concation ignore 0
 STATE
 App State = {
   displayValue: '0',
