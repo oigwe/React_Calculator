@@ -20,10 +20,12 @@ Value . - On Click Display displays . - concats to any value already displayed -
 OPERATIONS
 Value AC - On Click - Resets display and removes any stored values
 Value C - On Click - Clears operations and new input value and allows a new operation and new input 
+
 Value + - On Click - Stores value, clears display, adds stored value to new input value
 Value - - On Click - Stores value, clears display, subtracts new input value from stored value
 Value * - On Click - Stores value, clears display, multiples stored value to new input value
 Value / - On Click - Stores value, clears display, divides stored value to new input value
+
 Value = - On Click - Executes operation of stored value & new value (if no new value ignore)
 Value % - On Click Divides display by 100
 Value +/- - On Click Multiple display by -1
@@ -39,6 +41,11 @@ if AC - default - appears (=) is clicked -  clears display, clears previousValue
 
 if string input value includes "." ignore on click event 
 
+0 
+if display value starts with 0 - upon concation ignore 0 
+ex: 01234  -> 1234
+
+
 
 STATE
 App State = {
@@ -48,5 +55,5 @@ App State = {
   waitingForNewValue: false
 }
 
-Thougts - styling props of orange buttons
+Thoughts - styling props of orange buttons
 
