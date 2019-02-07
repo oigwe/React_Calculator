@@ -1,2 +1,9 @@
 import React from 'react';
-import './
+
+const Display = (props) => {
+    return <>
+        <div className="col-12 inputview">{props.display}</div>
+    </>
+}
+
+export default Display;
