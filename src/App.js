@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 import Buttons from './components/Buttons';
 import handleCalculate from './logic/calculation';
-
+import Display from './components/Display'
 
 class App extends Component {
+
 
   constructor(props) {
     super(props);
@@ -202,35 +203,41 @@ if(action==="divide"){
     return <>
       <div className="holder">
         <div className="calculator">
-          <div className="col-12 inputview">{this.state.displayValue}</div>
+         <Display display= {this.state.displayValue}/>
           <div className="row">
             <button onClick={this.handleClick} className="button col-3" data-action="AC">AC</button>
             <button onClick={this.handleClick} className="button col-3" data-action="percent">%</button>
             <button onClick={this.handleClick} className="button col-3" data-action="negPos">+/-</button>
             <button onClick={this.handleClick} className="button col-3 orange" data-action="divide">/</button>
           </div>
+
           <div className="row">
             <button onClick={this.handleClick} className="button col-3" value="7">7</button>
             <button onClick={this.handleClick} className="button col-3" value="8">8</button>
             <button onClick={this.handleClick} className="button col-3" value="9">9</button>
             <button onClick={this.handleClick} className="button col-3 orange" data-action="multiply">x</button>
           </div>
+
           <div className="row">
             <button onClick={this.handleClick} className="button col-3" value="4" >4</button>
             <button onClick={this.handleClick} className="button col-3" value="5" >5</button>
             <button onClick={this.handleClick} className="button col-3" value="6" >6</button>
             <button className="button col-3 orange" data-action="subtract" onClick={this.handleClick}>-</button>
           </div>
+
           <div className="row">
             <button onClick={this.handleClick} className="button col-3" value="1" >1</button>
             <button onClick={this.handleClick} className="button col-3" value="2" >2</button>
             <button onClick={this.handleClick} className="button col-3" value="3" >3</button>
             <button onClick={this.handleClick} className="button col-3 orange" data-action="add">+</button>
           </div>
+
+        
           <div className="row">
             <button onClick={this.handleClick} className="button col-6" value="0" >0</button>
             <button className="button col-3" data-action="decimal" onClick={this.handleClick}>.</button>
             <button className="button col-3 orange" data-action="equal" onClick={this.handleClick}>=</button>
+
           </div>
         </div>
       </div>
