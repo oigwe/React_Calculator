@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import Buttons from './components/Buttons';
-import handleCalculate from './logic/calculation';
 import Display from './components/Display'
 
 class App extends Component {
+
+
   constructor(props) {
     super(props);
     this.state = {
@@ -115,85 +116,6 @@ if(action==="divide"){
     this.setState({previousValue: this.state.displayValue, operation: "divide", displayValue: "divide" })
 }
 }
-
-      
-      
-      /*if(action === "add"){
-        if(this.state.previousValue && this.state.displayValue){
-          const results = Number(this.state.previousValue)+ Number(this.state.displayValue);
-          this.setState({displayValue: results, resultStorage: results, waitingForNewValue: true })
-        }
-        else
-          this.setState({previousValue: this.state.displayValue, operation: "add", displayValue: "add"});
-          setTimeout(e => {
-            console.log(3, this.state)
-          }, 3000)
-      
-    }*/
-      /*if(action === "add"){
-        if(this.state.previousValue){
-          const results = Number(this.state.previousValue)+ Number(this.state.displayValue);
-          this.setState({displayValue: results, waitingForNewValue: false, operation: "add", result: true, resultStorage: results, previousValue: this.state.displayValue})        
-        }
-        if(this.state.resultStorage){
-          const results = Number(this.state.resultStorage) + Number(this.state.displayValue);
-          this.setState({displayValue: results, resultStorage: results})
-          }
-        else{
-          this.setState({previousValue: this.state.displayValue, displayValue: "add", waitingForNewValue: true, operation: "add", result: false})
-        }
-      }*/
-
-      /*if(action==='add'){
-        if(this.state.previousValue){
-          console.log("A")
-          const result = Number(this.state.previousValue)+ Number(this.state.displayValue);
-          this.setState({displayValue: result})
-        }
-       else if(this.state.waitingForNewValue){
-         console.log("B")
-        this.setState({previousValue: this.state.displayValue, displayValue: "",  waitingForNewValue: true, operation: "Add"})
-      }
-    }*/
-      
-      /*if (action) {
-        if (action=== "add") {
-          if(this.state.waitingForNewValue === true){
-            if(this.state.previousValue){
-              const result = Number(this.state.previousValue) + Number(this.state.displayValue);
-              this.setState({displayValue: result})
-            }
-            if(!this.state.previousValue){
-
-            }
-          }
-          this.setState({operation: action, previousValue: this.state.displayValue, waitingForNewValue: true})
-        }
-       
-        if (action === "multiply"){
-          if(this.state.waitingForNewValue === true){
-          const result = Number(this.state.previousValue) * Number(this.state.displayValue);
-          this.setState({previousValue: result, displayValue: result})
-        }
-        this.setState({operation: action, previousValue: this.state.displayValue, waitingForNewValue: true})
-      }
-        if (action === "divide") {
-          if(this.state.waitingForNewValue === true){
-            const result = Number(this.state.previousValue)/Number(this.state.displayValue);
-            this.setState({previousValue: result, displayValue: result})
-          }
-          this.setState({operation: action, previousValue: this.state.displayValue, waitingForNewValue: true})
-        }
-        if (action === "subtract") {
-          if(this.state.waitingForNewValue === true){
-            console.log("sub1")
-            const result = Number(this.state.previousValue) - Number(this.state.displayValue);
-            this.setState({displayValue: result, waitingForNewValue: false})
-          }
-          else{console.log("sub2")
-          this.setState({operation: action, previousValue: this.state.displayValue, waitingForNewValue: true})
-        }}
-      }*/
     }
   }
 }
@@ -202,46 +124,11 @@ if(action==="divide"){
       <div className="holder">
         <div className="calculator">
          <Display display= {this.state.displayValue}/>
-          <div className="row">
-            <button onClick={this.handleClick} className="button col-3" data-action="AC">AC</button>
-            <button onClick={this.handleClick} className="button col-3" data-action="percent">%</button>
-            <button onClick={this.handleClick} className="button col-3" data-action="negPos">+/-</button>
-            <button onClick={this.handleClick} className="button col-3 orange" data-action="divide">/</button>
-          </div>
-
-          <div className="row">
-            <button onClick={this.handleClick} className="button col-3" value="7">7</button>
-            <button onClick={this.handleClick} className="button col-3" value="8">8</button>
-            <button onClick={this.handleClick} className="button col-3" value="9">9</button>
-            <button onClick={this.handleClick} className="button col-3 orange" data-action="multiply">x</button>
-          </div>
-
-          <div className="row">
-            <button onClick={this.handleClick} className="button col-3" value="4" >4</button>
-            <button onClick={this.handleClick} className="button col-3" value="5" >5</button>
-            <button onClick={this.handleClick} className="button col-3" value="6" >6</button>
-            <button className="button col-3 orange" data-action="subtract" onClick={this.handleClick}>-</button>
-          </div>
-
-          <div className="row">
-            <button onClick={this.handleClick} className="button col-3" value="1" >1</button>
-            <button onClick={this.handleClick} className="button col-3" value="2" >2</button>
-            <button onClick={this.handleClick} className="button col-3" value="3" >3</button>
-            <button onClick={this.handleClick} className="button col-3 orange" data-action="add">+</button>
-          </div>
-
-        
-          <div className="row">
-            <button onClick={this.handleClick} className="button col-6" value="0" >0</button>
-            <button className="button col-3" data-action="decimal" onClick={this.handleClick}>.</button>
-            <button className="button col-3 orange" data-action="equal" onClick={this.handleClick}>=</button>
-
-          </div>
+          <Buttons onClick={this.handleClick}/>
         </div>
       </div>
     </>
   }
 }
 
-
-export default App;
+export default App
