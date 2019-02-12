@@ -116,6 +116,25 @@ if(action==="divide"){
     this.setState({previousValue: this.state.displayValue, operation: "divide", displayValue: "divide" })
 }
 }
+
+if(action === "equal"){
+  if(this.state.operation ===  'add'){
+    const results = Number(this.state.resultStorage) + Number(this.state.displayValue);
+    this.setState({displayValue: results, waitingForNewValue: false, previousValue: "", resultStorage: results})
+  }
+  if(this.state.operation ===  'minus'){
+  const results = Number(this.state.resultStorage)-Number(this.state.displayValue);
+  this.setState({displayValue: results, waitingForNewValue: false, previousValue: "", resultStorage: results})
+}
+if(this.state.operation ===  'multiply'){
+const results = Number(this.state.resultStorage)* Number(this.state.displayValue);
+this.setState({displayValue: results, waitingForNewValue: false, previousValue: "", resultStorage: results})
+}
+if(this.state.operation ===  'divide'){
+const results = Number(this.state.resultStorage)/Number(this.state.displayValue);
+this.setState({displayValue: results, waitingForNewValue: false, previousValue: "", resultStorage: results})
+}
+}
     }
   }
 }
